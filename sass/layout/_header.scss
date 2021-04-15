@@ -1,0 +1,84 @@
+@import "../base/typography";
+
+.header {
+    border-top: 4px solid $color-primary-dark;
+    border-bottom: 1px solid $color-line;
+    padding: 6rem 0 3.4rem 0;
+    background-image: linear-gradient(to bottom,
+    $color-primary, $color-primary-light 25%, $color-primary-light 25%, $color-primary);
+    background-repeat: no-repeat;
+    position: relative;
+    
+    @include respond(tab-land) {
+        padding: 7rem 3rem;
+    }
+
+    @include respond(tab-port) {
+        padding: 5rem 3rem;
+    }
+
+    @include respond(phone) {
+        padding: 5rem 2.5rem;
+    }
+
+    &__text-box {
+        width: 75rem;
+ 
+        @include respond(tab-port) {
+            width: 100%;
+            margin-top: 10rem;
+            // text-align: center;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__portraits {
+        margin-top: 9.9rem;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: $gutter-vertical;
+
+        @include respond(tab-land) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+        }
+
+        @include respond(phone) {
+            justify-content: space-around;
+        }
+
+        &-single {
+            height: 14rem;
+            width: 14rem;
+            background-color: $color-brown;
+            border-radius: 5px;
+            position: relative;
+            z-index: 100;
+            -webkit-box-shadow: 0px 7px 5px 0px rgba($color-black, 0.65); 
+            box-shadow: 0px 3px 2px 0px rgba($color-black, 0.65);
+
+            @include respond(tab-land) {
+                margin-bottom: $gutter-vertical-small;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            @include respond(tab-port) {
+            }
+        }
+
+        &-text {
+            position: absolute;
+            color: $color-white;
+            top: 105%;
+        }
+    }
+}

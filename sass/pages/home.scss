@@ -1,0 +1,219 @@
+@import "../base/mixins";
+@import "../base/variables";
+@import "../base/typography";
+
+.section-our-work {
+    padding: 5.4rem 0 8rem 0;
+    border-top: 1rem solid $color-grey-light-2;
+    border-bottom: 1rem solid $color-grey-light-3;
+    background-color: $color-grey-light-1;
+    position: relative;
+    overflow: hidden;
+
+    @include respond(phone) {
+        padding: 4.5rem 0;
+    }
+    
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+            margin-bottom: $gutter-vertical;
+    
+            @include respond(tab-port) {
+                margin-bottom: $gutter-vertical-small;
+            }
+        }
+
+        @include respond(tab-land) {
+            padding: 0 2rem;
+        }
+    
+        @include respond(tab-port) {
+            justify-content: center;
+        }
+    }
+
+    &__text {
+        width: 40%;
+
+        @include respond(tab-land) {
+            width: 50%;
+        }
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+
+        @include respond(phone) {
+            margin-left: 0;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__links {
+        display: inline-block;
+        border-bottom: 2px solid $color-grey-light-4;
+        margin-bottom: 3rem;
+        @include respond(tab-port) {
+            display: block;
+        }
+    }
+
+    &__list {
+        margin-left: calc((100vw - 95rem) / 2);
+        list-style: none;
+        margin-bottom: 2rem;
+
+        @include respond(tab-land) {
+            margin-left: 10rem;
+        }
+
+        @include respond(phone) {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 2.4rem;
+
+            @include respond(phone) {
+                margin-right: 2rem;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-grey-light-text;
+        }
+
+        .active {
+            color: $color-blue-text;
+        }
+    }
+}
+
+.browser-image {
+    position: absolute;
+    height: 47.2rem;
+    width: 73rem;
+    top: 18%;
+    right: -3%;
+    background-image: linear-gradient(
+        -50deg,
+        rgba(255, 255, 255, 0.9) 0%,
+        rgba(255, 255, 255, 0.9) 2%, 
+        transparent 90%),
+        url('../../img/browser-image.jpg');
+    transform: scale(1);
+
+    @include respond(tab-land) {
+        right: -35%;
+    }
+
+    @include respond(tab-port) {
+        display: none;
+    }
+}
+
+.br-image-col {
+    @include respond(phone) {
+        display: none;
+    }
+}
+
+.business {
+    padding: 6rem 0 8.5rem 0;
+    border-bottom: 1rem solid $color-grey-light-2;
+
+    @include respond(tab-land) {
+        text-align: center;
+    }
+
+    @include respond(phone) {
+        text-align: center;
+    }
+
+    &__container-1 {
+        margin-bottom: 2rem;
+        padding-bottom: 5.6rem;
+        border-bottom: 1px solid $color-grey-light-4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond(tab-land) {
+            padding: 0 2rem;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+    }
+
+    &__container-2 {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @include respond(tab-land) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @include respond(tab-port) {
+            margin-bottom: $gutter-vertical-small;
+            justify-content: center;
+        }
+
+        @include respond(phone) {
+            justify-content: center;
+        }
+    }
+
+    h3 {
+        display: inline-block;
+    }
+
+    .btn {
+        @include respond(tab-land) {
+            margin: 2.5rem 0 4rem 0;
+        }
+        
+        @include respond(phone) {
+            margin: 2.5rem 0 4rem 0;
+        }
+    }
+
+    &__paragraph {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    p {
+        font-size: 2.5rem;
+        color: $color-grey-light-text;
+
+        @include respond(tab-land) {
+            margin: 0 auto;
+        }
+
+        @include respond(phone) {
+            margin: 0 auto;
+        }
+    
+    }
+}

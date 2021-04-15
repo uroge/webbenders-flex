@@ -1,0 +1,18 @@
+{
+  "name": "webbenders",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "sass": "sass --watch sass/main.scss:css/main/main.css sass/pages/home.scss:css/home/home.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.32.8"
+  }
+}

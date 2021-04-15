@@ -1,0 +1,50 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin header-color {
+    color: $color-white;
+    text-shadow: .7px 1px 2px $color-text-shadow;
+}
+
+@mixin orange-color {
+    text-shadow: .7px 2px 2px $color-orange-text;
+    color: $color-primary-text;
+    font-weight: 300;
+}
+
+@mixin heading {
+    font-weight: 100;
+    color: $color-blue-text;
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where normal styles apply
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content };    //600px
+    }
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content };     //900px
+    }
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content };    //1200px
+    }
+}

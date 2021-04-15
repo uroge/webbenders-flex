@@ -1,0 +1,53 @@
+.navigation {
+    @include header-color;
+    margin-bottom: 9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tab-land) {
+        width: 100%;
+    }
+
+    @include respond(tab-port) {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__logo {
+        font-size: 3.5rem;
+        font-weight: 300;
+        display: inline-block;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__nav {
+        margin-top: 1.3rem;
+
+        @include respond(phone) {
+            display: none;
+        }
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 2rem;
+        display: inline-block;
+
+        &:not(:last-child) {
+            margin-right: 3.4rem;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+    }
+}
