@@ -1,5 +1,5 @@
 .footer {
-    padding: 4rem 0 13rem 0;
+    padding: 5rem 0 13rem 0;
     border-top: 1px solid $color-line;
     
     border-bottom: 4px solid $color-primary-dark;
@@ -13,13 +13,10 @@
         @include respond(tab-land) {
             justify-content: space-around;
         }
-
-        @include respond(tab-port) {
-            flex-direction: column;
-        }
     
         @include respond(phone) {
             text-align: center;
+            flex-direction: column;
         }
     }
 
@@ -29,10 +26,14 @@
         justify-content: space-between;
         align-items: flex-start;
 
+        @include respond(tab-land) {
+            justify-content: center;
+            align-items: center;
+        }
+
         @include respond(tab-port) {
             justify-content: center;
             align-items: center;
-            margin-bottom: 3rem;
         }
     
         @include respond(phone) {
@@ -46,9 +47,15 @@
         justify-content: space-between;
         align-items: flex-end;
 
+        @include respond(tab-land) {
+            justify-content: center;
+            align-items: center;
+        }
+
         @include respond(tab-port) {
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
     }
 
@@ -69,6 +76,12 @@
     &__text {
         font-size: 2rem;
         @include orange-color;
+
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+            
+            text-align: center; 
+        }
 
         @include respond(phone) {
             font-size: 2.3rem;
@@ -95,10 +108,6 @@
         @include orange-color;
         span {
             font-weight: 700;
-        }
-
-        @include respond(phone) {
-            font-size: 3rem;
         }
     }
 }

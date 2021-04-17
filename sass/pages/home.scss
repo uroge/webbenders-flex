@@ -31,7 +31,9 @@
         }
     
         @include respond(tab-port) {
-            justify-content: center;
+            // justify-content: center;
+            display: block;
+            margin-left: 1rem;
         }
     }
 
@@ -68,7 +70,7 @@
         margin-bottom: 2rem;
 
         @include respond(tab-land) {
-            margin-left: 10rem;
+            margin-left: 3rem;
         }
 
         @include respond(phone) {
@@ -176,7 +178,7 @@
 
         @include respond(tab-port) {
             margin-bottom: $gutter-vertical-small;
-            justify-content: center;
+            justify-content: space-around;
         }
 
         @include respond(phone) {
@@ -214,6 +216,30 @@
         @include respond(phone) {
             margin: 0 auto;
         }
-    
+    }
+
+    &__img {
+        overflow: hidden;
+
+        @media only screen and (max-width: 961px) { 
+            width: 15%;
+        };
+
+        @include respond(tab-port) {
+            margin-bottom: 5rem;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: calc(50% - 20px);
+        }
+
+        @include respond(phone) {
+            width: 100%;
+        }
+
+        img {
+            @include respond(tab-port) {
+                transform: scale(1.3);
+            }
+        }
     }
 }

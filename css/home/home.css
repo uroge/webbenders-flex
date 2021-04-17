@@ -178,7 +178,8 @@ $breakpoint arguement choices:
 }
 @media only screen and (max-width: 56.25em) {
   .section-our-work__container {
-    justify-content: center;
+    display: block;
+    margin-left: 1rem;
   }
 }
 .section-our-work__text {
@@ -218,7 +219,7 @@ $breakpoint arguement choices:
 }
 @media only screen and (max-width: 75em) {
   .section-our-work__list {
-    margin-left: 10rem;
+    margin-left: 3rem;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -326,7 +327,7 @@ $breakpoint arguement choices:
 @media only screen and (max-width: 56.25em) {
   .business__container-2 {
     margin-bottom: 5rem;
-    justify-content: center;
+    justify-content: space-around;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -363,6 +364,32 @@ $breakpoint arguement choices:
 @media only screen and (max-width: 37.5em) {
   .business p {
     margin: 0 auto;
+  }
+}
+.business__img {
+  overflow: hidden;
+}
+@media only screen and (max-width: 961px) {
+  .business__img {
+    width: 15%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .business__img {
+    margin-bottom: 5rem;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: calc(50% - 20px);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .business__img {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .business__img img {
+    transform: scale(1.3);
   }
 }
 

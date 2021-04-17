@@ -14,7 +14,7 @@
     }
 
     @include respond(tab-port) {
-        padding: 5rem 3rem;
+        padding: 7rem 6rem;
     }
 
     @include respond(phone) {
@@ -67,11 +67,23 @@
 
             @include respond(tab-land) {
                 margin-bottom: $gutter-vertical-small;
-                margin-left: 10px;
-                margin-right: 10px;
+                margin-left: 5px;
+                margin-right: 5px;
             }
 
+            @media only screen and (max-width: 961px) { 
+                width: 15%;
+            };
+
             @include respond(tab-port) {
+                margin-bottom: 5rem;
+                margin-left: 5px;
+                margin-right: 5px;
+                width: calc(50% - 20px);
+            }
+
+            @include respond(phone) {
+                width: 100%;
             }
         }
 
