@@ -151,7 +151,7 @@
         justify-content: space-between;
 
         @include respond(tab-land) {
-            padding: 0 2rem;
+            padding: 2em 2rem;
         }
 
         @include respond(tab-port) {
@@ -178,7 +178,7 @@
 
         @include respond(tab-port) {
             margin-bottom: $gutter-vertical-small;
-            justify-content: space-around;
+            justify-content: center;
         }
 
         @include respond(phone) {
@@ -191,9 +191,6 @@
     }
 
     .btn {
-        @include respond(tab-land) {
-            margin: 2.5rem 0 4rem 0;
-        }
         
         @include respond(phone) {
             margin: 2.5rem 0 4rem 0;
@@ -220,6 +217,7 @@
 
     &__img {
         overflow: hidden;
+        width: calc((100% - 5 * 2rem) / 6);
 
         @media only screen and (max-width: 961px) { 
             width: 15%;
@@ -229,7 +227,7 @@
             margin-bottom: 5rem;
             margin-left: 5px;
             margin-right: 5px;
-            width: calc(50% - 20px);
+            width: calc(50% - 50px);
         }
 
         @include respond(phone) {
@@ -237,8 +235,10 @@
         }
 
         img {
+            width: 100%;
+
             @include respond(tab-port) {
-                transform: scale(1.3);
+                width: 50%;
             }
         }
     }
